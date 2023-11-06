@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+* ,
+*::after ,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #15284b;
+    font-size: inherit;
+}
+
+:root{
+    --flex-column-gap: 2rem;
+    --input-padding-tb: .75rem;
+    --input-padding-lr: 1rem;
+    --main-color: rgb(77, 107, 221);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: calc(var(--flex-column-gap) / 2);
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9fa;
+    width: 90%;
+    height: 80%;
+    gap: var(--flex-column-gap);
+    padding: calc(var(--input-padding-lr) * 1.5);
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    overflow: visible;
+    margin-top: var(--flex-column-gap);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--flex-column-gap);
+}
+
+input[type='text'] {
+    padding: var(--input-padding-tb) var(--input-padding-lr);
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+input[type='text']:hover {
+    border: 1px solid rgba(77, 107, 221, 0.34);
+}
+
+input[type='text']:focus {
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 0 4px rgb(77 107 221 / .2);
+    outline: 0;
+}
+
+.form .input-container {
+    position: relative;
+}
+
+.form .lbl-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.form .lbl-container span {
+    font-size: 16px;
+    color: rgb(50, 70, 179);
+    background: rgba(50, 70, 179, 0.06);
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid rgba(50, 70, 179, 0.11);
+}
+
+.form .lbl-container span:hover {
+    background-color: rgba(50, 70, 179, 0.16);
+}
+
+.lbl-symbol {
+    position: absolute;
+    top: var(--input-padding-tb);
+    bottom: var(--input-padding-tb);
+    right: var(--input-padding-lr);
+    height: max-content;
+    width: max-content;
+}
+
+.lbl-symbol span {
+    color: #8a8a8a;
+}
+
+.calculate-btn {
+    background: var(--main-color);
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+    padding: var(--input-padding-tb);
+    border: 0;
+    font-weight: 500;
+    margin-top: calc(var(--input-padding-tb) + var(--input-padding-tb) * .5);
+}
+
+.calculate-btn:hover {
+    background-color: rgb(62, 88, 179);
+}
+
+.calculate-btn:active {
+    background-color: rgb(54, 75, 153)
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--input-padding-tb) * .5);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.more-info-content p{
+    display: none;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #8a8a8a;
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 300ms cubic-bezier(0, 0, 0.23, 0.97);
+}
+
+.more-info-content {
+    display: none;
+    position: absolute;
+    bottom: 1.3rem;
+    left: 0;
+    transition: bottom 300ms cubic-bezier(0, 0, 0.23, 0.97), opacity 300ms cubic-bezier(0, 0, 0.23, 0.97);
+    opacity: 0;
+}
+
+span:hover ~ .more-info-content p {
+    display: block;
+    opacity: 1;
+}
+
+span:hover ~ .more-info-content{
+    display: block;
+    width: 40ch;
+    background: white;
+    padding: var(--input-padding-tb);
+    z-index: 100;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(138, 138, 138, 0.3);
+    bottom: 2rem;
+    opacity: 1;
+}
+
+.error-container {
+    width: 100%;
+    padding: var(--input-padding-tb);
+    text-align: center;
+    background-color: rgb(253, 220, 220);
+    border-radius: 8px;
+    transition: width 350ms ease-in;
+    animation: error-animatoin 350ms forwards;
+}
+
+.error-container p {
+    color: #542323;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9fa;
+    width: 90%;
+    gap: var(--flex-column-gap);
+    padding: calc(var(--input-padding-lr) * 1.5);
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 5rem;
+}
+
+input[disabled] {
+    background-color: #e5e5e5;
+}
+
+input[disabled]:hover {
+    border: 1px solid #e5e5e5;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon[hidden] {
+    display: none;
+}
+
+
+
+
+
+

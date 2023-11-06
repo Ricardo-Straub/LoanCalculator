@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Loan Calculator</h1>
+    <form class="form">
+        <div>
+            <div class="lbl-container">
+                <label for="loan-input" class="lbl-text">Loan Amount</label>
+                <span class="material-symbols-outlined">question_mark</span>
+                <div class="more-info-content">
+                    <p>Dein Startkapital, welches du gleich von Anfang an investieren möchtest (kann auch 0€ sein, wenn du nur monatlich sparen möchtest).</p>
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" class="loan-input" name="loan-input" id="loan-input">
+                <label for="loan-input" class="lbl-symbol">
+                    <span class="material-symbols-outlined">attach_money</span>
+                </label>
+            </div>
+        </div>
+        <div>
+            <div class="lbl-container">
+                <label for="interest-input" class="lbl-text">Annual Interest</label>
+                <span class="material-symbols-outlined">question_mark</span>
+                <div class="more-info-content">
+                    <p>Dein Startkapital, welches du gleich von Anfang an investieren möchtest (kann auch 0€ sein, wenn du nur monatlich sparen möchtest).</p>
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" class="interest-input" name="interest-input" id="interest-input">
+                <label for="interest-input" class="lbl-symbol">
+                    <span class="material-symbols-outlined">percent</span>
+                </label>
+            </div>
+        </div>
+        <div>
+            <div class="lbl-container">
+                <label for="years-input" class="lbl-text">Repayment Years</label>
+                <span class="material-symbols-outlined">question_mark</span>
+                <div class="more-info-content">
+                    <p>Dein Startkapital, welches du gleich von Anfang an investieren möchtest (kann auch 0€ sein, wenn du nur monatlich sparen möchtest).</p>
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" class="years-input" name="years-input" id="years-input">
+                <label for="years-input" class="lbl-symbol">
+                    <span>Years</span>
+                </label>
+            </div>
+        </div>
+        <input type="button" value="Calculate" class="calculate-btn">
+    </form>
+    <div class="icon-container">
+        <i class="icon fa-3x fa-spin fa-solid fa-spinner" hidden></i>
+    </div>
+</div>
+<script defer src="app.js"></script>
+</body>
+</html>
